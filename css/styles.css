@@ -52,14 +52,12 @@ p {
 .header-content {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-
 }
 
 .page-header {
     border-bottom: 1px solid #E7E9FC;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .navigation {
