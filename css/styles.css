@@ -1,3 +1,4 @@
+/* Resetting styles */
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -18,6 +19,7 @@ ol {
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 h1,
@@ -31,6 +33,7 @@ p {
     padding: 0;
 }
 
+/* General */
 .container {
     max-width: 1158px;
     margin-left: auto;
@@ -40,9 +43,33 @@ p {
 
 }
 
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* Header Section */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+
+}
+
+.page-header {
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+}
 
 .logo {
     font-family: "Raleway", sans-serif;
+    display: inline-block;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
@@ -50,6 +77,8 @@ p {
     text-transform: uppercase;
     text-decoration: none;
     color: #4d5ae5;
+    width: 115px;
+    margin-right: 76px;
 }
 
 .logo .second-part-logo {
@@ -60,6 +89,10 @@ p {
     color: #f4f4fd;
 }
 
+.menu {
+    display: flex;
+    gap: 40px;
+}
 
 .menu .link {
     font-weight: 500;
@@ -67,8 +100,8 @@ p {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    padding: 24px 0;
 }
-
 
 .menu .link:hover,
 .menu .link:focus {
@@ -92,72 +125,23 @@ p {
     color: #404bbf;
 }
 
-.order-section {
+.contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+}
+
+/* Hero Section */
+
+.hero {
     background-color: #2e2f42;
     padding-top: 188px;
     padding-bottom: 188px;
 }
 
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.team {
-    background-color: #f4f4fd;
-}
-
-.benefits-list {
-    display: flex;
-    gap: 24px;
-}
-
-.benefits-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding-bottom: 32px;
-    border-radius: 0 0 4px 4px;
-
-}
-
-.card-info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.card-text {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 8px;
-    padding: 32px 16px;
-    border-bottom: 1px solid #E7E9FC;
-    border-right: 1px solid #E7E9FC;
-    border-left: 1px solid #E7E9FC;
-}
-
 .page-title {
-
-    padding-left: 316px;
-    padding-right: 316px;
+    max-width: 496px;
     margin-bottom: 48px;
     font-weight: 700;
     font-size: 56px;
@@ -168,7 +152,9 @@ p {
 }
 
 .order-button {
-    padding: 16px;
+    display: block;
+    min-width: 169px;
+    height: 56px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -185,7 +171,7 @@ p {
     background-color: #404bbf
 }
 
-
+/* General styles for section title */
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -197,12 +183,14 @@ p {
     margin-bottom: 72px;
 }
 
+/* General styles for text */
 .title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .text {
@@ -212,11 +200,49 @@ p {
     color: #434455;
 }
 
+/* Benefits section */
+.benefits-list {
+    display: flex;
+    gap: 24px;
+}
+
+.benefits-item {
+    width: calc((100%-3*24px)/4);
+}
+
+/* Team section */
+
+.team {
+    background-color: #f4f4fd;
+}
+
 .team-list {
     display: flex;
     gap: 24px;
 }
 
+.team-list .card {
+    background-color: #FFFFFF;
+}
+
+.team-member-card {
+    width: calc((100%-3*24px)/4);
+    border-radius: 0 0 4px 4px;
+}
+
+.team-member-card-info {
+    padding: 32px 0;
+}
+
+.team-list .team-member-card .title {
+    text-align: center;
+}
+
+.team-list .team-member-card .text {
+    text-align: center;
+}
+
+/* Portfolio Section */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -225,68 +251,29 @@ p {
 
 }
 
-.team-list .card {
-    background-color: #FFFFFF;
+.portfolio-card {
+    width: calc((100% - 48px) / 3);
 }
 
-.page-footer {
-    background: #2e2f42;
+.portfolio-card-info {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
+
 }
 
+/* Fotter Section */
 .page-footer {
     padding-top: 100px;
     padding-bottom: 100px;
+    background: #2e2f42;
+}
+
+.page-footer .logo {
+    margin-bottom: 16px;
 }
 
 .page-footer .text {
     color: #f4f4fd;
-    margin-top: 16px;
     width: 264px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px;
-    width: 115px;
-
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px 0;
-
-
-}
-
-.contacts {
-    display: flex;
-
-}
-
-.contacts-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-
-}
-
-.nav1 {
-    display: flex;
-    gap: 76px;
-}
-
-.header1 {
-    border-bottom: 1px solid #E7E9FC;
 }
